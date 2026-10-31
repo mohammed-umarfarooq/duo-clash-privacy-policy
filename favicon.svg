@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C1017"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#334155" stroke-width="2"/>
+  
+  <!-- Stylized Duo Clash Shield -->
+  <path d="M 32 10 L 48 16 C 48 30, 42 44, 32 52 C 22 44, 16 30, 16 16 Z" fill="url(#shieldGrad)" stroke="#78350F" stroke-width="1.5"/>
+  
+  <!-- Inner Contrast Emblem -->
+  <path d="M 32 15 L 44 20 C 44 31, 39 41, 32 47 C 32 47, 32 15, 32 15 Z" fill="#FDE68A" opacity="0.4"/>
+  
+  <!-- Lightning / Clash Accent -->
+  <path d="M 30 20 L 25 32 L 31 32 L 27 44 L 38 30 L 32 30 Z" fill="#0C1017"/>
+  <path d="M 32 22 L 28 32 L 33 32 L 30 42 L 38 31 L 33 31 Z" fill="url(#accentGrad)"/>
+</svg>
