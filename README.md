@@ -25,10 +25,11 @@ Duo Clash is engineered with a strict **privacy-by-design** approach:
    - Production Ad Units: Rewarded video ads, interstitial ads, and banner ads.
    - Uses the Android Advertising ID (`com.google.android.gms.permission.AD_ID`) for ad attribution, frequency capping, and fraud prevention.
 
-3. **Diagnostics & Telemetry (Google Firebase Analytics)**:
+3. **Gameplay Telemetry & Performance (Google Firebase Analytics)**:
    - Firebase Project ID: `duo-clash-2e980`
    - Mobile SDK App ID: `1:759570360753:android:e3c2569e7c281651137590`
-   - Collects pseudonymous in-game events (`app_launch`, `game_start`, `game_complete`, `level_complete`, `booster_used`, `ad_reward_earned`) and crash telemetry to maintain stability.
+   - Collects pseudonymous in-game events (`app_launch`, `game_start`, `game_complete`, `level_complete`, `booster_used`, `ad_reward_earned`) and engagement metrics to maintain game stability.
+   - Does not set custom user IDs (`setUserId` is never called) or configure custom user properties.
 
 4. **Android Permissions**:
    - `android.permission.INTERNET`

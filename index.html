@@ -110,7 +110,7 @@
         <div class="summary-card">
           <div class="summary-icon">📊</div>
           <h3 class="summary-title">Firebase Analytics</h3>
-          <p class="summary-text">Gathers aggregated in-game telemetry and diagnostic crash data to fix bugs and monitor game performance.</p>
+          <p class="summary-text">Gathers aggregated in-game telemetry and engagement metrics to optimize gameplay and monitor performance.</p>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@
         </p>
         <ul>
           <li><strong>Google AdMob</strong>: Provides rewarded video ads, interstitial ads, and non-intrusive banner ads.</li>
-          <li><strong>Google Firebase Analytics</strong>: Collects pseudonymous gameplay telemetry and crash diagnostics to maintain stability.</li>
+          <li><strong>Google Firebase Analytics</strong>: Collects pseudonymous gameplay telemetry and engagement metrics to maintain game stability.</li>
         </ul>
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
@@ -236,9 +236,9 @@
           AdMob uses this data to serve relevant advertisements, prevent ad fraud and click abuse, limit repeated ad exposures, and verify that in-game rewards (such as revives or boosters) are properly granted.
         </p>
 
-        <h3>B. Google Firebase Analytics (Diagnostics & Telemetry)</h3>
+        <h3>B. Google Firebase Analytics (Gameplay Telemetry & Performance)</h3>
         <p>
-          The game integrates Google Firebase Analytics (Firebase BOM <code>33.7.0</code>, Project ID: <code>duo-clash-2e980</code>) via a native Godot plugin to monitor app health, discover gameplay bugs, and optimize minigame performance. Firebase automatically collects:
+          The game integrates Google Firebase Analytics (Firebase BOM <code>33.7.0</code>, Project ID: <code>duo-clash-2e980</code>) via a native Godot plugin to monitor overall app health, track milestone progression, and optimize minigame performance. Firebase automatically collects:
         </p>
         <ul>
           <li><strong>Firebase App Instance ID</strong>: A pseudonymous, randomly generated token unique to your installation.</li>
@@ -252,11 +252,10 @@
               <li><code>ad_reward_earned</code>: Verified completion of a rewarded video ad.</li>
             </ul>
           </li>
-          <li><strong>Engagement Metrics</strong>: Number of app launches, active session length, and retention intervals.</li>
-          <li><strong>Crash & Performance Diagnostics</strong>: Stack traces, memory warnings, and device hardware specifications during unexpected closures.</li>
+          <li><strong>Engagement & Technical Metrics</strong>: Number of app launches, active session duration, retention intervals, device model, and Android OS version.</li>
         </ul>
         <p>
-          Firebase Analytics does not link these gameplay events to your real name or personal contact information.
+          Firebase Analytics does not link these gameplay events to your real name or personal contact information. <strong>No Custom User IDs or Properties:</strong> Duo Clash does not assign or transmit custom Firebase User IDs (<code>setUserId</code> is never invoked), nor does it configure or transmit custom user demographic properties.
         </p>
       </section>
 
@@ -283,7 +282,7 @@
               <tr>
                 <td><code>android.permission.INTERNET</code></td>
                 <td>Standard Network</td>
-                <td>Allows communicating with Google AdMob servers to fetch ads and sending diagnostic events to Firebase Analytics.</td>
+                <td>Allows communicating with Google AdMob servers to fetch ads and sending gameplay telemetry events to Firebase Analytics.</td>
               </tr>
               <tr>
                 <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
@@ -325,7 +324,7 @@
           <li><strong>Game Operation & Maintenance</strong>: Ensuring minigames run smoothly across diverse Android hardware specifications.</li>
           <li><strong>Free Ad-Supported Access</strong>: Delivering ads that subsidize free gameplay without charging users for download or level advancement.</li>
           <li><strong>In-Game Booster Rewards</strong>: Verifying that a rewarded video ad has completed so the game can credit hearts, revives, or booster moves.</li>
-          <li><strong>Crash Prevention & Bug Resolution</strong>: Analyzing telemetry data to identify device-specific rendering errors or physics issues.</li>
+          <li><strong>Gameplay Balance & Optimization</strong>: Analyzing gameplay milestone telemetry to balance minigame difficulty, verify ad completions, and ensure smooth performance across supported devices.</li>
           <li><strong>Fraud Prevention & Policy Compliance</strong>: Complying with Google Play Store and Samsung Galaxy Store policies regarding ad click fraud and invalid traffic prevention.</li>
         </ul>
         <p>
@@ -363,7 +362,7 @@
               <tr>
                 <td><strong>Google Firebase Analytics</strong></td>
                 <td>Google LLC</td>
-                <td>App performance, gameplay telemetry & diagnostics</td>
+                <td>App performance, gameplay telemetry & engagement metrics</td>
                 <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy & Security ↗</a></td>
               </tr>
               <tr>
@@ -402,9 +401,12 @@
           You can reset or completely delete your Android Advertising ID at any time via Android system settings (see Section 12).
         </p>
 
-        <h3>3. Firebase Analytics Data Retention</h3>
+        <h3>3. Firebase Analytics Data Retention & Deletion</h3>
         <p>
-          Analytics event data logged in Google Firebase Analytics is automatically deleted according to standard retention periods configured in Google Analytics (typically 2 to 14 months). If you wish to request deletion of analytics records associated with your pseudonymous instance, contact us at <a href="mailto:mufstudios.support@gmail.com">mufstudios.support@gmail.com</a>.
+          Analytics event data logged in Google Firebase Analytics is retained according to standard Google Analytics data retention cycles (typically 2 to 14 months) and is then automatically purged by Google.
+        </p>
+        <p>
+          <strong>Pseudonymous Data Notice:</strong> Because Duo Clash does not require an account, collect personal identity details, or link analytics events to user email addresses, MUF Studios has no technical mechanism to identify, look up, or delete individual pseudonymous Firebase analytics records upon email request. Users who wish to reset or stop analytics tracking may clear the application's local data in Android Settings, reset their Advertising ID, or uninstall the application.
         </p>
       </section>
 
@@ -636,3 +638,4 @@
   </script>
 </body>
 </html>
+
